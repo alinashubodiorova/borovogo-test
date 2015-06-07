@@ -1,0 +1,57 @@
+.nav-wrapper {
+    border-top: 1px solid #dbddde;
+    .wrapper {
+        padding-left: 70px;
+        @media #{$media-767} {
+            padding-left: 0;
+        }
+    }
+    .menu {
+        display: none;
+        font-size: 14px;
+        color: $grey;
+        width: 100%;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        line-height: 25px;
+        vertical-align: middle;
+        .fa {
+            font-size: 25px;
+            margin-right: 20px;
+            float: left;
+        }
+        @media #{$media-767} {
+            display: inline-block;
+        }
+    }
+    .nav {
+        @media #{$media-767} {
+            display: none;
+        }
+    }
+    a {
+        line-height: 40px;
+        vertical-align: middle;
+        color: $grey;
+        font-size: 12px;
+        padding: 0 20px;
+        display: inline-block;
+        &:hover {
+            color: #ffffff;
+            background: $orange;
+        }
+        &.active {
+            color: #ffffff;
+            background: $grey;
+        }
+        @media #{$media-767} {
+            display: block;
+            line-height: 30px;
+            padding: 0 15px;
+            text-align: left;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+    }
+}

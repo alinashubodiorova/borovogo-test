@@ -1,0 +1,82 @@
+.main {
+    .wrapper {
+    }
+    .slider-item {
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        padding-left: 75px;
+        padding-top: 60px;
+        color: #ffffff;
+        position: absolute;
+        top: 0;
+        text-align: left;
+        font-weight: bold;
+        @media #{$media-1023} {
+            padding-top: 40px;
+        }
+        @media #{$media-767} {
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        @media #{$media-540} {
+            padding: 10px 5px 0px;
+        }
+        .text-cat {
+            height: 30px;
+            width: 190px;
+            font-size: 16px;
+            background: $orange;
+            text-transform: uppercase;
+            line-height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            @media #{$media-1023} {
+                height: auto;
+                line-height: 1.5;
+            }
+            @media #{$media-540} {
+                font-size: 12px;
+            }
+        }
+        %width-t {
+            width: 600px;
+            @media #{$media-767} {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+        h2 {
+            font-size: 60px;
+            line-height: 48px;
+            @extend %width-t;
+            margin-top: 15px;
+            @media #{$media-1023} {
+                font-size: 40px;
+                line-height: 1;
+            }
+            @media #{$media-767} {
+                font-size: 5vw;
+                margin-top: 1vw;
+            }
+        }
+        .text-expl {
+            font-size: 16px;
+            line-height: 24px;
+            @extend %width-t;
+            font-family: Arial;
+            margin-top: 20px;
+            @media #{$media-1023} {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+            @media #{$media-767} {
+                font-size: 3vw;
+                margin-top: 1vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+body {
+    font-family: $Roboto;
+    font-size: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    @media #{$media-1279} {
+        width: 1024px;
+    }
+    @media #{$media-1023} {
+        width: 768px;
+    }
+    @media #{$media-767} {
+        width: 100%;
+        min-width: 320px;
+    }
+}
+
+a {
+    text-decoration: none;
+}

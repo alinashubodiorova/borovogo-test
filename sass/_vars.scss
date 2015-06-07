@@ -1,0 +1,20 @@
+/* media */
+$media-540: 'only screen and (max-width: 540px)';
+$media-767: 'only screen and (max-width: 767px)';
+$media-1023: 'only screen and (max-width: 1023px)';
+$media-1279: 'only screen and (max-width: 1279px)';
+
+/* color */
+$orange: #f29700;
+$grey: #3c4148;
+
+/* sprite */
+$mysprite-spacing: 20px;
+
+@import "mysprite/*.png";
+
+@mixin mySprite($img) {
+    @include mysprite-sprite($img);
+    width: mysprite-sprite-width($img);
+    height: mysprite-sprite-height($img);
+}

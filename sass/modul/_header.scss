@@ -1,0 +1,74 @@
+.header {
+    @include clearfixmain;
+    padding: 25px 0;
+    @media #{$media-767} {
+        padding: 10px 0;
+    }
+    h1 {
+        color: $orange;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 75px;
+        margin-top: 15px;
+        @media #{$media-767} {
+            margin-top: 0px;
+        }
+    }
+    img {
+        float: left;
+    }
+    .left {
+        float: left;
+        @media #{$media-540} {
+            float: none;
+            @include clearfixmain;
+        }
+    }
+    .right {
+        float: right;
+        @media #{$media-540} {
+            float: none;
+        }
+    }
+    p {
+        color: #959595;
+        font-size: 14px;
+        margin-left: 75px;
+        margin-top: 10px;
+    }
+    .search {
+        padding-top: 20px;
+        @media #{$media-540} {
+            padding: 10px 0px 0px 10px;
+        }
+        %inp {
+            vertical-align: top;
+            height: 25px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        input {
+            @extend %inp;
+            width: 240px;
+            border: 1px solid #e5e5e5;
+            border-radius: 2px;
+            padding: 0 10px;
+            @media #{$media-767} {
+                width: 180px;
+            }
+            @media #{$media-540} {
+                width: 250px;
+            }
+        }
+        button {
+            @extend %inp;
+            width: 25px;
+            margin: 0 10px;
+            border: none;
+            color: $orange;
+            background: #ffffff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}

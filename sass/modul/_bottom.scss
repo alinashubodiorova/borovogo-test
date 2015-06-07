@@ -1,0 +1,57 @@
+.activities {
+    border-bottom: 1px solid #dbddde;
+    a {
+        display: inline-block;
+        width: 20%;
+        box-sizing: border-box;
+        border-color: transparent;
+        border-style: solid;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        font-size: 13px;
+        color: $grey;
+        vertical-align: top;
+        height: 120px;
+        text-align: center;
+        position: relative;
+        &:hover {
+            border-color: #e6e6e6;
+            background: #eeeeee;
+        }
+        @media #{$media-1023} {
+            font-size: 12px;
+        }
+        @media #{$media-767} {
+            height: 60px;
+            width: 100%;
+        }
+        span {
+            display: inline-block;
+            position: absolute;
+            bottom: 45px;
+            text-align: left;
+            left: 60px;
+            @media #{$media-767} {
+                bottom: 20px;
+                left: 50px;
+            }
+        }
+        &:before {
+            display: inline-block;
+            position: absolute;
+            bottom: 45px;
+            content: '';
+            left: 15px;
+            @media #{$media-767} {
+                bottom: 15px;
+                left: 5px;
+                transform: scale(0.7);
+            }
+        }
+        @each $item in services, works, activities, maintenance, testlab {
+            &.#{$item}:before {
+                @include mySprite(#{$item});
+            }
+        }
+    }
+}
